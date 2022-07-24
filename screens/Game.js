@@ -1,9 +1,10 @@
 import { Text, View, StyleSheet } from "react-native";
+import Title from "../components/Title";
 
 function Game() {
   return (
-    <View>
-      <Text>Game Screen!</Text>
+    <View style={styles.container}>
+      <Title>Opponent's Guess</Title>
     </View>
   );
 }
@@ -11,5 +12,8 @@ function Game() {
 export default Game;
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex: 1,
+    padding: 24,
+  },
 });

@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { StyleSheet, ImageBackground } from "react-native";
+import { StyleSheet, ImageBackground, SafeAreaView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import StartGame from "./screens/StartGame";
 import Game from "./screens/Game";
+import Colors from "./constants/colors";
 
 export default function App() {
   const [userNumber, setUserNumber] = useState("");
@@ -21,7 +22,7 @@ export default function App() {
   return (
     <LinearGradient
       style={styles.rootContainer}
-      colors={["#CA4E79", "#FFC18E"]}
+      colors={[Colors.primary, Colors.teal]}
     >
       <ImageBackground
         source={require("./assets/fox_paint_artwork_5k-720x1280.jpg")}
@@ -29,7 +30,7 @@ export default function App() {
         style={styles.rootContainer}
         imageStyle={styles.backgroundImage}
       >
-        {screen}
+        <SafeAreaView style={styles.rootContainer}>{screen}</SafeAreaView>
       </ImageBackground>
     </LinearGradient>
   );
