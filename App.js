@@ -3,6 +3,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import StartGame from "./screens/StartGame";
 
 export default function App() {
+
   return (
     <LinearGradient
       style={styles.rootContainer}
